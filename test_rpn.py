@@ -15,6 +15,9 @@ class TestBasics(unittest.TestCase):
   def test_divide(self):
     result = rpn.calculate("6 2 /")
     self.assertEqual(3, result)
+  def test_exponant(self):
+    result = rpn.calculate("2 3 ^")
+    self.assertEqual(8, result)
   def test_toomanythings(self):
     with self.assertRaises(TypeError):
       rpn.calculate('1 2 3 +')
